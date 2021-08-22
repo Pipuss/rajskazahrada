@@ -1,0 +1,36 @@
+/* stylelint-disable at-rule-no-unknown */
+
+@mixin reset-indent {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin width--s {
+  @media (min-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin width--m {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin width--l {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin set-font ($f-size, $l-height, $f-weight) {
+  font-size: $f-size;
+  line-height: $l-height;
+  font-weight: $f-weight;
+}
