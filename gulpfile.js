@@ -19,7 +19,7 @@ const concat = require(`gulp-concat`);
 const fileinclude = require(`gulp-file-include`);
 
 gulp.task(`clean`, function () {
-  return del(`build`);
+  return del(`docs`);
 });
 
 gulp.task(`copy`, function () {
@@ -33,7 +33,7 @@ gulp.task(`copy`, function () {
   ], {
     base: `source`,
   })
-    .pipe(gulp.dest(`build`));
+    .pipe(gulp.dest(`docs`));
 });
 
 gulp.task(`imagemin`, function () {
@@ -47,7 +47,7 @@ gulp.task(`imagemin`, function () {
         progressive: true
       }),
     ]))
-    .pipe(gulp.dest(`build/img`));
+    .pipe(gulp.dest(`docs/img`));
 });
 
 gulp.task(`webp`, function () {
@@ -55,7 +55,7 @@ gulp.task(`webp`, function () {
     .pipe(webp({
       quality: 90
     }))
-    .pipe(gulp.dest(`build/img`));
+    .pipe(gulp.dest(`docs/img`));
 });
 
 gulp.task(`svgo`, function () {
@@ -81,7 +81,7 @@ gulp.task(`copysvg`, function () {
   return gulp.src(`source/img/**/*.svg`, {
     base: `source`
   })
-    .pipe(gulp.dest(`build`));
+    .pipe(gulp.dest(`docs`));
 });
 
 gulp.task(`sprite`, function () {
@@ -90,7 +90,7 @@ gulp.task(`sprite`, function () {
       inlineSvg: true
     }))
     .pipe(rename(`sprite_auto.svg`))
-    .pipe(gulp.dest(`build/img`));
+    .pipe(gulp.dest(`docs/img`));
 });
 
 gulp.task(`html`, function () {
@@ -102,7 +102,7 @@ gulp.task(`html`, function () {
         test: `text`
       }
     }))
-    .pipe(gulp.dest(`build`));
+    .pipe(gulp.dest(`docs`));
 });
 
 gulp.task(`css`, function () {
@@ -113,11 +113,11 @@ gulp.task(`css`, function () {
     .pipe(postcss([autoprefixer({
       grid: true,
     })]))
-    .pipe(gulp.dest(`build/css`))
+    .pipe(gulp.dest(`docs/css`))
     .pipe(csso())
     .pipe(rename(`style.min.css`))
     .pipe(sourcemap.write(`.`))
-    .pipe(gulp.dest(`build/css`))
+    .pipe(gulp.dest(`docs/css`))
     .pipe(server.stream());
 });
 
@@ -125,14 +125,14 @@ gulp.task(`script`, function () {
   return gulp.src([`source/js/main.js`])
     // .pipe(webpackStream(webpackConfig))
     .pipe(uglify())
-    .pipe(gulp.dest(`build/js`));
+    .pipe(gulp.dest(`docs/js`));
 });
 
 gulp.task(`copypngjpg`, function () {
   return gulp.src(`source/img/**/*.{png,jpg}`, {
     base: `source`
   })
-    .pipe(gulp.dest(`build`));
+    .pipe(gulp.dest(`docs`));
 });
 
 gulp.task('optimizesvg', gulp.series(`svgo`, 'copysvg', `sprite`));
@@ -141,7 +141,7 @@ gulp.task('optimizeimages', gulp.series(`imagemin`, `webp`));
 
 gulp.task(`server`, function () {
   server.init({
-    server: `build/`,
+    server: `docs/`,
     notify: false,
     open: true,
     cors: true,
@@ -182,7 +182,7 @@ gulp.task(`start`, gulp.series(`build`, `server`));
 gulp.task(`concat-js`, function () {
   return gulp.src([`source/js/main.js`, `source/js/utils/**/*.js`, `source/js/modules/**/*.js`])
     .pipe(concat(`main.readonly.js`))
-    .pipe(gulp.dest(`build/js`));
+    .pipe(gulp.dest(`docs/js`));
 });
 
 // для ускоренного запуска без оптимизации размера изображений.
