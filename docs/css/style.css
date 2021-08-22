@@ -478,6 +478,10 @@ img {
   }
 }
 
+.page-header__logo {
+  width: 52px;
+  height: 40px;
+}
 @media (min-width: 768px) {
   .page-header__logo {
     width: 90px;
