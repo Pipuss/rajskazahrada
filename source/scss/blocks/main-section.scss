@@ -1,0 +1,69 @@
+.main {
+  position: relative;
+
+  @include width--l {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.main__content-image {
+  width: 100%;
+  height: auto;
+}
+
+.main-section__title {
+  position: absolute;
+  top: 43%;
+  right: 12%;
+
+  @include set-font (24px, 1.1, 700);
+
+  text-align: center;
+  color: $color-white;
+  -webkit-text-stroke: 1px $color-brown;
+
+  @include width--m {
+    top: 39%;
+    left: 22%;
+
+    @include set-font (42px, 1.3, 700);
+  }
+
+  @include width--l {
+    @include set-font (62px, 1.1, 900);
+  }
+}
+
+.main-section__subtitle {
+  position: absolute;
+  bottom: 5%;
+  right: 8%;
+
+  @include set-font (14px, 1.3, 400);
+
+  text-align: right;
+  color: $color-brown-dark;
+
+  @include width--m {
+    @include set-font (18px, 1.3, 700);
+
+    text-align: center;
+  }
+
+  @include width--l {
+    @include set-font (24px, 1.1, 700);
+  }
+}
+
+.main-section__subtitle .headword {
+  font-weight: 900;
+
+  @include width--m {
+    @include set-font (24px, 1.1, 700);
+  }
+
+  @include width--l {
+    @include set-font (42px, 1.3, 700);
+  }
+}
