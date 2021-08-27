@@ -48,8 +48,37 @@
   border-bottom: 1px solid $color-gray;
 
   @include width--l {
+    position: relative;
     border: none;
     flex-basis: auto;
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      top: 43px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $color-brown;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:active::after {
+      opacity: 0;
+    }
+
+    &--current {
+      content: "";
+      position: absolute;
+      top: 43px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $color-brown;
+    }
   }
 }
 

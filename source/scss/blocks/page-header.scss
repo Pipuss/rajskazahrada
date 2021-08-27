@@ -7,6 +7,7 @@
     align-items: center;
     min-width: 1395px;
     margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -72,6 +73,37 @@
 .contacts__mail {
   display: flex;
   align-items: center;
+}
+
+.contacts__mail a,
+.contacts__tel a {
+  @include width--l {
+    position: relative;
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      top: 45px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $color-brown;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:active::after {
+      opacity: 0;
+    }
+  }
+}
+
+.contacts__icon-mail symbol path {
+  @include width--l {
+    // fill: $color-yellow;
+  }
 }
 
 .contacts__mail {

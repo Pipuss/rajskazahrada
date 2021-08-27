@@ -16,7 +16,7 @@
 
 <body class="page__body">
 
-  <svg class="svg-spite" style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+  <svg class="svg-sprite" style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
     <clippath id="clip01">
     <rect width="30" height="30" fill="white" transform="translate(0.5)"/>
     </clippath>
@@ -160,16 +160,16 @@
       </a>
       <div class="page-header__contacts contacts">
       <div class="contacts__tel">
-        <svg class="contacts__telegram-icon" width="30" height="30">
+        <svg class="contacts__icon-telegram" width="30" height="30">
           <use xlink:href="#social-telegram"></use>
         </svg>
-        <svg class="contacts__viber-icon" width="30" height="30">
+        <svg class="contacts__icon-viber" width="30" height="30">
           <use xlink:href="#social-viber"></use>
         </svg>
         <a href="tel:+380982152256">+3 8 098 215 22 56</a>
       </div>
         <div class="contacts__mail">
-          <svg width="30" height="30">
+          <svg class="contacts__icon-mail" width="30" height="30">
             <use xlink:href="#social-mail"></use>
           </svg>
           <a href="mailto:raiskazahrada@gmail.com">raiskazahrada@gmail.com</a>
@@ -185,7 +185,7 @@
         </picture>
       </a>
       <ul class="nav__list">
-        <li class="nav__list-item">
+        <li class="nav__list-item nav__list-item">
           <a href="http://">
             Проживання
           </a>
@@ -217,8 +217,8 @@
   <main>
     <h1 class="visually-hidden">База відпочинку Райська Заграда</h1>
 
-    <section class="main-section main wrapper">
-      <picture>
+    <section class="main-section main">
+      <picture class="main__content-image">
         <source media="(min-width: 1920px)" type="image/webp" srcset="img/content/main-section-desktop.webp 1x, img/content/main-section-desktop@2x.webp 2x" width="1438" height="738">
 
         <source media="(min-width: 768px)" type="image/webp" srcset="img/content/main-section-tablet.webp 1x, img/content/main-section-tablet@2x.webp 2x" width="768" height="429">
