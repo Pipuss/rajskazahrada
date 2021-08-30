@@ -1,0 +1,23 @@
+.contacts__mail {
+  & svg {
+    & circle {
+      fill: $color-brown;
+    }
+
+    & path {
+      fill: $color-white;
+    }
+  }
+
+  &:hover {
+    & circle {
+      fill: $color-yellow;
+    }
+  }
+
+  &:active {
+    & path {
+      fill: $color-brown;
+    }
+  }
+}

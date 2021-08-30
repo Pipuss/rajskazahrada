@@ -78,7 +78,7 @@
 
 .contacts__mail a,
 .contacts__tel a {
-  @include width--l {
+  @include width--m {
     position: relative;
 
     &:hover::after {
@@ -98,12 +98,6 @@
     &:active::after {
       opacity: 0;
     }
-  }
-}
-
-.contacts__icon-mail symbol path {
-  @include width--l {
-    // fill: $color-yellow;
   }
 }
 

@@ -346,33 +346,46 @@ template {
 /* stylelint-enable */
 @font-face {
   font-family: "Lato";
-  src: local("Lato"), url("../../fonts/Lato-Light.woff2") format("woff2"), url("../../fonts/Lato-Light.woff") format("woff");
+  src: local("Lato"), url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: local("Lato"), url("../../fonts/Lato-Regular.woff2") format("woff2"), url("../../fonts/Lato-Regular.woff") format("woff");
+  src: local("Lato"), url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: local("Lato"), url("../../fonts/Lato-Bold.woff2") format("woff2"), url("../../fonts/Lato-Bold.woff") format("woff");
+  src: local("Lato"), url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: local("Lato"), url("../../fonts/Lato-Black.woff2") format("woff2"), url("../../fonts/Lato-Black.woff") format("woff");
+  src: local("Lato"), url("../fonts/Lato-Black.woff2") format("woff2"), url("../fonts/Lato-Black.woff") format("woff");
   font-style: normal;
   font-weight: 900;
   font-display: swap;
 }
 /* stylelint-disable at-rule-no-unknown */
+.contacts__mail svg circle {
+  fill: #9d6f3e;
+}
+.contacts__mail svg path {
+  fill: #fff;
+}
+.contacts__mail:hover circle {
+  fill: #fdb808;
+}
+.contacts__mail:active path {
+  fill: #9d6f3e;
+}
+
 .page {
   height: 100%;
 }
@@ -567,7 +580,7 @@ img {
           align-items: center;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
   .contacts__mail a,
 .contacts__tel a {
     position: relative;
