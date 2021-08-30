@@ -2,8 +2,8 @@
   font-family: 'Lato';
   src:
     local('Lato'),
-    url('fonts/Lato-Light.woff2') format('woff2'),
-    url('fonts/Lato-Light.woff') format('woff');
+    url('../fonts/Lato-Light.woff2') format('woff2'),
+    url('../fonts/Lato-Light.woff') format('woff');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -13,8 +13,8 @@
   font-family: 'Lato';
   src:
     local('Lato'),
-    url('fonts/Lato-Regular.woff2') format('woff2'),
-    url('fonts/Lato-Regular.woff') format('woff');
+    url('../fonts/Lato-Regular.woff2') format('woff2'),
+    url('../fonts/Lato-Regular.woff') format('woff');
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -24,8 +24,8 @@
   font-family: 'Lato';
   src:
     local('Lato'),
-    url('fonts/Lato-Bold.woff2') format('woff2'),
-    url('fonts/Lato-Bold.woff') format('woff');
+    url('../fonts/Lato-Bold.woff2') format('woff2'),
+    url('../fonts/Lato-Bold.woff') format('woff');
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -35,8 +35,8 @@
   font-family: 'Lato';
   src:
     local('Lato'),
-    url('fonts/Lato-Black.woff2') format('woff2'),
-    url('fonts/Lato-Black.woff') format('woff');
+    url('../fonts/Lato-Black.woff2') format('woff2'),
+    url('../fonts/Lato-Black.woff') format('woff');
   font-style: normal;
   font-weight: 900;
   font-display: swap;
