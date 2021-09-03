@@ -459,8 +459,10 @@
     document.addEventListener('DOMContentLoaded', function () {
       new ChiefSlider('.slider', {
         loop: true,
-        autoplay: false,
-        interval: 5000,
+        autoplay: true,
+        interval: 3000,
+        swipe: true,
+        refresh: false,
       });
     });
   </script>
