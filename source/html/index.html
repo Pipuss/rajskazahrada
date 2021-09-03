@@ -16,7 +16,8 @@
 
 <body class="page__body">
 
-  <svg class="svg-sprite" style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+  <svg class="svg-sprite" style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
     <clippath id="clip01">
     <rect width="30" height="30" fill="white" transform="translate(0.5)"/>
     </clippath>
@@ -390,9 +391,79 @@
       <a class="rooms__button button-link" href="#">Дізнатись більше</a>
     </section>
 
+    <section class="gallery-slider">
+      <h2 class="visually-hidden">Слайдер галереї</h2>
+      <div class="wrapper">
+
+        <div class="slider" data-slider="chiefslider">
+          <div class="slider__container">
+            <div class="slider__wrapper">
+              <div class="slider__items">
+                <div class="slider__item">
+                  <div class="slider__item-container">
+                    <div class="slider__item-content">
+                      <img src="img/index/gallery-slider/slide1.jpg" alt="Фото галереї" width="280" height="212">
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__item">
+                  <div class="slider__item-container">
+                    <div class="slider__item-content">
+                      <img src="img/index/gallery-slider/slide2.jpg" alt="Фото галереї" width="280" height="212">
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__item">
+                  <div class="slider__item-container">
+                    <div class="slider__item-content">
+                      <img src="img/index/gallery-slider/slide3.jpg" alt="Фото галереї" width="280" height="212">
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__item">
+                  <div class="slider__item-container">
+                    <div class="slider__item-content">
+                      <img src="img/index/gallery-slider/slide4.jpg" alt="Фото галереї" width="280" height="212">
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__item">
+                  <div class="slider__item-container">
+                    <div class="slider__item-content">
+                      <img src="img/index/gallery-slider/slide5.jpg" alt="Фото галереї" width="280" height="212">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="slider__control" data-slide="prev"></a>
+          <a href="#" class="slider__control" data-slide="next"></a>
+          <ol class="slider__indicators">
+            <li data-slide-to="0"></li>
+            <li data-slide-to="1"></li>
+            <li data-slide-to="2"></li>
+            <li data-slide-to="3"></li>
+            <li data-slide-to="4"></li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
+  <script defer src="js/chief-slider.js"></script>
   <script src="js/main.js" type="module"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new ChiefSlider('.slider', {
+        loop: true,
+        autoplay: false,
+        interval: 5000,
+      });
+    });
+  </script>
 
 </body>
 </html>

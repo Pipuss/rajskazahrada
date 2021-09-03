@@ -122,7 +122,7 @@ gulp.task(`css`, function () {
 });
 
 gulp.task(`script`, function () {
-  return gulp.src([`source/js/main.js`])
+  return gulp.src([`source/js/*.js`])
     // .pipe(webpackStream(webpackConfig))
     .pipe(uglify())
     .pipe(gulp.dest(`docs/js`));
