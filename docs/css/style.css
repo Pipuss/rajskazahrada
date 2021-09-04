@@ -344,7 +344,6 @@ template {
   display: none;
 }
 
-/* stylelint-enable */
 @font-face {
   font-family: "Lato";
   src: local("Lato"), url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff");
@@ -388,6 +387,7 @@ template {
 }
 
 .page {
+  max-width: 1920px;
   height: 100%;
 }
 
@@ -1311,6 +1311,59 @@ img {
   }
 }
 
+.gallery-slider {
+  width: 100%;
+  min-height: 415px;
+  padding-top: 20px;
+  background-color: #f5ecd9;
+}
+@media (min-width: 768px) {
+  .gallery-slider {
+    min-height: 573px;
+  }
+}
+@media (min-width: 1440px) {
+  .gallery-slider {
+    min-height: 705px;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery-slider.wrapper {
+    padding: 0;
+    padding-top: 44px;
+  }
+}
+@media (min-width: 1440px) {
+  .gallery-slider.wrapper {
+    padding-top: 74px;
+  }
+}
+
+.gallery-slider__title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .gallery-slider__title {
+    margin-bottom: 30px;
+    font-size: 32px;
+    line-height: 1.3;
+    font-weight: 900;
+  }
+}
+@media (min-width: 1440px) {
+  .gallery-slider__title {
+    margin-bottom: 40px;
+    font-size: 42px;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+}
+
 .slider__container {
   padding-left: 0;
   padding-right: 0;
@@ -1318,11 +1371,17 @@ img {
 }
 
 .slider__item-container {
-  line-height: 250px;
-  font-size: 100px;
   text-align: center;
-  height: 212px;
-  color: #fff;
+}
+@media (min-width: 768px) {
+  .slider__item-container {
+    margin: 0 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .slider__item-container {
+    margin: 0 15px;
+  }
 }
 
 .slider {
@@ -1369,6 +1428,11 @@ img {
             flex: 0 0 20%;
     max-width: 20%;
   }
+}
+
+.slider__image {
+  width: 100%;
+  height: auto;
 }
 
 /* кнопки влево и вправо */
@@ -1463,7 +1527,7 @@ img {
   margin-left: 3px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: black;
   background-clip: padding-box;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
