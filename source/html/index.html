@@ -391,9 +391,9 @@
       <a class="rooms__button button-link" href="#">Дізнатись більше</a>
     </section>
 
-   <!-- <section class="gallery-slider wrapper">
+   <section class="gallery-slider wrapper">
       <h2 class="gallery-slider__title section-title">Галерея</h2>
-        <div class="slider" data-slider="chiefslider">
+        <div class="slider" data-slider="chiefslider" data-autoplay="true" data-interval="2000">
           <div class="slider__container">
             <div class="slider__wrapper">
               <div class="slider__items">
@@ -502,11 +502,11 @@
           </ol>
         </div>
         <a href="#" class="gallery-slider__button button-link">Всі фотографії</a>
-    </section> -->
+    </section>
 
     <section class="feedback-slider wrapper">
       <h2 class="feedback-slider__title section-title">Відгуки</h2>
-        <div class="slider" data-slider="chiefslider">
+        <div class="slider" data-slider="chiefslider" data-autoplay="true" data-interval="3000">
           <div class="slider__container">
             <div class="slider__wrapper">
               <div class="slider__items">
@@ -575,15 +575,17 @@
   <script defer src="js/chief-slider.js"></script>
   <script src="js/main.js" type="module"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      new ChiefSlider('.slider', {
-        loop: true,
-        autoplay: true,
-        interval: 1500,
-        swipe: true,
-        refresh: true,
-      });
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.slider').forEach(element => {
+        new ChiefSlider(element, {
+          loop: element.dataset.loop || 'true' === 'true',
+          autoplay: element.dataset.autoplay || 'false' === 'true',
+          interval: +element.dataset.interval || 5000,
+          swipe: element.dataset.swipe || 'true' === 'true',
+          refresh: element.dataset.refresh || 'false' === 'true'
     });
+  });
+});
   </script>
 
 </body>
