@@ -3,8 +3,7 @@
 
   @include width--m {
     display: flex;
-    justify-content: space-around;
-    padding: 0 10px;
+    padding: 0 20px;
   }
 
   @include width--l {
@@ -65,7 +64,6 @@
 
     @include set-font (18px, 1.3, 700);
   }
-
 }
 
 .promo__list .headword {
@@ -133,14 +131,19 @@
   }
 }
 
-.promo__image {
-  width: 100%;
-  height: auto;
-
-  @include width--m {
-    width: 354px;
-    height: 960px;
+.promo picture {
+  @include width--m-only {
+    flex-grow: 1;
     margin-right: 23px;
+  }
+}
+
+.promo__image {
+  @include width--m-only {
+    width: 100%;
+    height: 960px;
+    object-fit: cover;
+    object-position: center;
   }
 
   @include width--l {

@@ -23,6 +23,12 @@
   }
 }
 
+@mixin width--m-only {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    @content;
+  }
+}
+
 @mixin width--l {
   @media (min-width: $desktop-width) {
     @content;

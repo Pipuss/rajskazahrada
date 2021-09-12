@@ -56,10 +56,11 @@
 
 .about__video-container {
   min-width: 100%;
-  height: 40vh;
+  height: 30vh;
 
   @include width--m {
     min-width: 728px;
+    height: 45vh;
   }
 
   @include width--l {
