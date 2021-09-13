@@ -42,6 +42,10 @@
   }
 }
 
+.feedback-slider .slider__container {
+  margin: 0;
+}
+
 .feedback-slider .slider__item-container {
   padding: 20px 11px 32px 20px;
   margin: 6px;
@@ -117,3 +121,6 @@
   }
 }
 
+.feedback-slider .slider__indicators {
+  bottom: -15px;
+}

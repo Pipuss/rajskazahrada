@@ -17,6 +17,12 @@
   }
 }
 
+@mixin width--s-only {
+  @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
 @mixin width--m {
   @media (min-width: $tablet-width) {
     @content;
