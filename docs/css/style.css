@@ -1486,29 +1486,25 @@ img {
   width: 20px;
   height: 20px;
 }
-.slider__control::before {
-  position: absolute;
-  content: "";
-  top: 25%;
-  left: 15%;
-  background-color: #73492a;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  border-radius: 10px;
-}
-.slider__control::after {
-  position: absolute;
-  content: "";
-  bottom: 25%;
-  left: 15%;
-  background-color: #73492a;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  border-radius: 10px;
-}
 .slider__control::before, .slider__control::after {
+  position: absolute;
+  content: "";
   width: 13px;
   height: 2px;
+  background-color: #73492a;
+  border-radius: 10px;
+}
+.slider__control::before {
+  top: 25%;
+  left: 15%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.slider__control::after {
+  bottom: 25%;
+  left: 15%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .slider__control[data-slide=prev] {
   left: 45px;
@@ -1766,8 +1762,33 @@ img {
   }
 }
 
+.feedback-slider .slider__control[data-slide=prev]::before {
+  top: 43%;
+}
+.feedback-slider .slider__control[data-slide=prev]::after {
+  bottom: 5%;
+}
+.feedback-slider .slider__control[data-slide=next]::before {
+  top: 8%;
+}
+.feedback-slider .slider__control[data-slide=next]::after {
+  bottom: 40%;
+}
+
 .feedback-slider .slider__indicators {
-  bottom: -15px;
+  bottom: -20px;
+}
+
+@media (min-width: 768px) {
+  .subscribe {
+    position: relative;
+  }
+}
+@media (min-width: 1440px) {
+  .subscribe {
+    width: 1418px;
+    margin: 0 auto;
+  }
 }
 
 .subscribe__title {
@@ -1800,6 +1821,27 @@ img {
   padding: 20px 10px;
   -webkit-box-shadow: 0 4px 8px 4px rgba(115, 73, 42, 0.2);
           box-shadow: 0 4px 8px 4px rgba(115, 73, 42, 0.2);
+}
+@media (min-width: 768px) {
+  .subscribe__form {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    width: 55%;
+    min-height: 386px;
+    padding: 41px 32px 41px 20px;
+    z-index: 10;
+    background-color: #fff;
+  }
+}
+@media (min-width: 1440px) {
+  .subscribe__form {
+    top: 125px;
+    left: 0;
+    width: 734px;
+    min-height: 386px;
+    padding: 42px 112px;
+  }
 }
 
 .form__title {
@@ -1892,4 +1934,22 @@ img {
   min-height: 40px;
   border: none;
   outline: none;
+}
+
+@media (min-width: 768px) {
+  .subscribe__image-container {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    width: 606px;
+    height: 450px;
+  }
+}
+@media (min-width: 1440px) {
+  .subscribe__image-container {
+    top: 95px;
+    right: 0;
+    width: 734px;
+    height: 451px;
+  }
 }

@@ -122,30 +122,26 @@
   width: 20px;
   height: 20px;
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 25%;
-    left: 15%;
-    background-color: $color-brown-dark;
-    transform: rotate(-45deg);
-    border-radius: 10px;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    bottom: 25%;
-    left: 15%;
-    background-color: $color-brown-dark;
-    transform: rotate(45deg);
-    border-radius: 10px;
-  }
-
   &::before,
   &::after {
+    position: absolute;
+    content: "";
     width: 13px;
     height: 2px;
+    background-color: $color-brown-dark;
+    border-radius: 10px;
+  }
+
+  &::before {
+    top: 25%;
+    left: 15%;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    bottom: 25%;
+    left: 15%;
+    transform: rotate(45deg);
   }
 
   &[data-slide='prev'] {

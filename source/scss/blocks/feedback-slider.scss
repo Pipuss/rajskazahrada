@@ -121,6 +121,28 @@
   }
 }
 
+.feedback-slider .slider__control {
+  &[data-slide='prev'] {
+    &::before {
+      top: 43%;
+    }
+
+    &::after {
+      bottom: 5%;
+    }
+  }
+
+  &[data-slide='next'] {
+    &::before {
+      top: 8%;
+    }
+
+    &::after {
+      bottom: 40%;
+    }
+  }
+}
+
 .feedback-slider .slider__indicators {
-  bottom: -15px;
+  bottom: -20px;
 }

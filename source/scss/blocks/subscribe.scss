@@ -1,3 +1,14 @@
+.subscribe {
+  @include width--m {
+    position: relative;
+  }
+
+  @include width--l {
+    width: 1418px;
+    margin: 0 auto;
+  }
+}
+
 .subscribe__title {
   margin-bottom: 23px;
 
@@ -23,6 +34,25 @@
   margin-bottom: 20px;
   padding: 20px 10px;
   box-shadow: 0 4px 8px 4px rgba(115, 73, 42, 0.2);
+
+  @include width--m {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    width: 55%;
+    min-height: 386px;
+    padding: 41px 32px 41px 20px;
+    z-index: 10;
+    background-color: $color-white;
+  }
+
+  @include width--l {
+    top: 125px;
+    left: 0;
+    width: 734px;
+    min-height: 386px;
+    padding: 42px 112px;
+  }
 }
 
 .form__title {
@@ -86,4 +116,21 @@
   min-height: 40px;
   border: none;
   outline: none;
+}
+
+.subscribe__image-container {
+  @include width--m {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    width: 606px;
+    height: 450px;
+  }
+
+  @include width--l {
+    top: 95px;
+    right: 0;
+    width: 734px;
+    height: 451px;
+  }
 }
