@@ -1,11 +1,17 @@
 .subscribe {
+  margin-bottom: 40px;
+
   @include width--m {
     position: relative;
+    min-height: 522px;
+    margin-bottom: 60px;
   }
 
   @include width--l {
     width: 1418px;
+    min-height: 546px;
     margin: 0 auto;
+    margin-bottom: 100px;
   }
 }
 
