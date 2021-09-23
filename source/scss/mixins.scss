@@ -46,3 +46,9 @@
   line-height: $l-height;
   font-weight: $f-weight;
 }
+
+@mixin resolution-2x {
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
+}

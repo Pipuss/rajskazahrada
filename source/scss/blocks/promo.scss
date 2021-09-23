@@ -151,3 +151,36 @@
     height: 877px;
   }
 }
+
+.promo__image-bg {
+  width: 100%;
+  height: 377px;
+  background-image: url("../img/index/promo-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: 140% auto;
+  animation: bg-pan-bl 20s ease-in-out both;
+
+  @include resolution-2x {
+    background-image: url("../img/index/promo-mobile@2x.jpg");
+  }
+
+  @include width--m {
+    height: 960px;
+    margin-right: 23px;
+    background-image: url("../img/index/promo-tablet.jpg");
+
+    @include resolution-2x {
+      background-image: url("../img/index/promo-tablet@2x.jpg");
+    }
+  }
+
+  @include width--l {
+    width: 585px;
+    height: 877px;
+    background-image: url("../img/index/promo-desktop.jpg");
+
+    @include resolution-2x {
+      background-image: url("../img/index/promo-desktop@2x.jpg");
+    }
+  }
+}
