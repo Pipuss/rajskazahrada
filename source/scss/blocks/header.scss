@@ -56,16 +56,14 @@
     position: absolute;
     right: 0;
     top: 80px;
-  }
 
-  overflow: hidden;
+    &--closed {
+      animation: tilt-out-right-1 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
 
-  &--closed {
-    animation: tilt-out-right-1 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-
-  &--opened {
-    animation: tilt-in-right-1 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    &--opened {
+      animation: tilt-in-right-1 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
   }
 
   @include width--l {
