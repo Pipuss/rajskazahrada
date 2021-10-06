@@ -13,6 +13,7 @@
   width: 1440px;
   margin: 0 auto;
   padding: 6px 24px 7px 19px;
+  overflow: hidden;
 
   @include width--m-only {
     justify-content: space-between;
@@ -57,8 +58,10 @@
     top: 80px;
   }
 
+  overflow: hidden;
+
   &--closed {
-    transform: translateX(300px);
+    animation: tilt-out-right-1 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
   &--opened {
