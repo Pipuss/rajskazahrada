@@ -33,6 +33,14 @@
 .nav__list {
   @include reset-list;
 
+  & > *:not(:last-child) {
+    margin: 0 0 40px 0;
+
+    @include width--l {
+      margin: 0;
+    }
+  }
+
   @include width--l {
     display: flex;
     justify-content: space-between;
@@ -79,13 +87,5 @@
       height: 4px;
       background-color: $color-brown;
     }
-  }
-}
-
-.nav__list-item:not(:last-child) {
-  margin-bottom: 40px;
-
-  @include width--l {
-    margin: 0;
   }
 }

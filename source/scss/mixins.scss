@@ -18,7 +18,7 @@
 }
 
 @mixin width--s-only {
-  @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+  @media (min-width: $mobile-width - 1px) and (max-width: $tablet-width) {
     @content;
   }
 }
@@ -30,7 +30,7 @@
 }
 
 @mixin width--m-only {
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
     @content;
   }
 }
