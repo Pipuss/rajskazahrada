@@ -31,6 +31,10 @@
 .header__logo {
   margin: 0 64px 0 0;
 
+  &:active {
+    opacity: 0.6;
+  }
+
   @include width--m-only {
     margin-right: 34px;
   }
@@ -102,6 +106,32 @@
   }
 }
 
+.header__nav-item {
+  @include width--l {
+    position: relative;
+
+    &:hover {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -26px;
+        width: 100%;
+        height: 4px;
+        background-color: $color-brown;
+      }
+    }
+
+    &:active {
+      opacity: 0.6;
+
+      &::after {
+        height: 0;
+      }
+    }
+  }
+}
+
 .header__contacts {
   display: flex;
   align-items: center;
@@ -139,6 +169,38 @@
 
   @include width--s-only {
     margin: 0;
+  }
+
+  @include width--m {
+    position: relative;
+
+    &:hover {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -29px;
+        width: 100%;
+        height: 4px;
+        background-color: $color-brown;
+      }
+    }
+
+    &:active {
+      opacity: 0.6;
+
+      &::after {
+        height: 0;
+      }
+    }
+  }
+
+  @include width--l {
+    &:hover {
+      &::after {
+        bottom: -28px;
+      }
+    }
   }
 }
 

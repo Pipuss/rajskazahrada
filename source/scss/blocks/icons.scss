@@ -18,6 +18,10 @@
   &:hover {
     background-color: $color-brown-dark;
   }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .header__icon {
