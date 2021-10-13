@@ -24,7 +24,7 @@ const closeMenu = () => {
   menuMain.classList.add("header__nav--closed");
   menuCheckbox.checked = false;
   document.removeEventListener('keydown', onMenuEscKeydown);
-  // document.removeEventListener('mouseup', onMenuDocumentClick);
+  document.removeEventListener('click', onMenuDocumentClick);
 }
 
 const onMenuEscKeydown = (evt) => {

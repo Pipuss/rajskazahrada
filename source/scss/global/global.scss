@@ -65,6 +65,14 @@ img {
   color: $color-white;
   background-color: $color-brown-dark;
   border-radius: 10px;
+
+  &:hover {
+    @include trans-bg-color($color-brown, 0.6s);
+  }
+
+  &:active {
+    @include trans-bg-color($color-brown-bright, 0.3s);
+  }
 }
 
 .wrapper {

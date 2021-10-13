@@ -122,6 +122,10 @@
 }
 
 .feedback-slider .slider__control {
+  @include width--l {
+    bottom: -55px;
+  }
+
   &[data-slide='prev'] {
     &::before {
       top: 43%;
@@ -145,4 +149,12 @@
 
 .feedback-slider .slider__indicators {
   bottom: -20px;
+
+  @include width--m {
+    bottom: -35px;
+  }
+
+  @include width--l {
+    bottom: -53px;
+  }
 }

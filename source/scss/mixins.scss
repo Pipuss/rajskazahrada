@@ -52,3 +52,13 @@
     @content;
   }
 }
+
+@mixin trans-bg-color ($bg-color, $duration) {
+  background-color: $bg-color;
+  transition: background-color $duration ease 0s;
+}
+
+@mixin trans-fill ($fill-color, $duration) {
+  fill: $fill-color;
+  transition: fill $duration ease 0s;
+}

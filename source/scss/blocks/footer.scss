@@ -186,6 +186,7 @@
   @include width--l {
     position: static;
     align-self: start;
+    min-width: 160px;
   }
 }
 
@@ -200,10 +201,6 @@
   @include width--m {
     flex-direction: row;
     flex-wrap: wrap;
-  }
-
-  @include width--l {
-    // justify-content: space-around;
   }
 }
 
