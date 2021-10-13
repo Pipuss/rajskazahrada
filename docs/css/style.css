@@ -487,11 +487,6 @@ template {
   height: 30px;
   border-radius: 50%;
 }
-@media (min-width: 320px) and (max-width: 768px) {
-  .icon-container {
-    display: none;
-  }
-}
 
 .header__icon {
   fill: #fff;
@@ -500,6 +495,11 @@ template {
 .header__icon-container {
   vertical-align: middle;
   background-color: #9d6f3e;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .header__icon-container {
+    display: none;
+  }
 }
 .header__icon-container:hover {
   background-color: #fdb808;
