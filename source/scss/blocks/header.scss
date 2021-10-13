@@ -214,7 +214,7 @@
 
 // Nav-tooggle
 
-.header__nav-tooggle {
+.header__nav-toggle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -225,7 +225,7 @@
   }
 }
 
-.header__nav-tooggle input {
+.header__nav-toggle input {
   display: flex;
   width: 35px;
   height: 35px;
@@ -235,7 +235,7 @@
   z-index: 1; /* top of the menu */
 }
 
-.header__nav-tooggle span {
+.header__nav-toggle span {
   width: 35px;
   height: 4px;
   margin-bottom: 8px;
@@ -256,15 +256,15 @@
   transform-origin: bottom right;
 }
 
-.header__nav-tooggle input:checked ~ .span1 {
+.header__nav-toggle input:checked ~ .span1 {
   transform: rotate(45deg) translate(8px);
 }
 
-.header__nav-tooggle input:checked ~ .span2 {
+.header__nav-toggle input:checked ~ .span2 {
   transform: rotate(495deg) translate(4px);
 }
 
-.header__nav-tooggle input:checked ~ .span3 {
+.header__nav-toggle input:checked ~ .span3 {
   transform: rotate(45deg);
   opacity: 0;
 }
