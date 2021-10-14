@@ -6,7 +6,7 @@ const ACCESS_TOKEN = 'pk.eyJ1IjoicGlwdXMiLCJhIjoiY2t1cW14d214Mml1eTJxbzY4aWoxNHp
 const MAIN_ICON_SIZE = [90, 68];
 const MAIN_ICON_ANCHOR = [26, 52];
 const MAP_POPUP_POSITION = [-3, -76];
-const MAIN_ICON_URL = '../img/icons/map-icon.png';
+const MAIN_ICON_URL = 'img/icons/map-icon.webp';
 
 const MAP = L.map('map-canvas').setView(MAP_COORDS_DEFAULT, MAP_ZOOM_DEFAULT);
 
