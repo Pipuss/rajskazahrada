@@ -487,6 +487,9 @@ template {
   height: 30px;
   border-radius: 50%;
 }
+.icon-container:hover {
+  cursor: pointer;
+}
 
 .header__icon {
   fill: #fff;
@@ -664,6 +667,15 @@ img {
 
 .section-title {
   color: #73492a;
+}
+
+#map-canvas {
+  height: 222px;
+}
+@media (min-width: 768px) {
+  #map-canvas {
+    height: 306px;
+  }
 }
 
 .header {
@@ -2118,6 +2130,10 @@ img {
   font-weight: 400;
   color: #73492a;
 }
+.form__input:focus {
+  outline: none;
+  border-width: 2px;
+}
 
 .form__message {
   max-width: 85%;
@@ -2138,6 +2154,9 @@ img {
   min-height: 40px;
   border: none;
   outline: none;
+}
+.form__button:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {

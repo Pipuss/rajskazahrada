@@ -8,6 +8,9 @@
   <link rel="icon" href="img/icons/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/icons/favicons/favicon-180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
   <link rel="stylesheet" href="css/style.min.css">
 
   <title>Райська Заграда</title>
@@ -606,7 +609,8 @@
       </picture>
     </section>
 
-    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.295740138065!2d23.439746315644406!3d48.007995979213256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47378f14dbf9dd4b%3A0xe76cbe9db51f49ae!2sRajska%20zahrada!5e0!3m2!1suk!2sua!4v1631878992071!5m2!1suk!2sua" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.295740138065!2d23.439746315644406!3d48.007995979213256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47378f14dbf9dd4b%3A0xe76cbe9db51f49ae!2sRajska%20zahrada!5e0!3m2!1suk!2sua!4v1631878992071!5m2!1suk!2sua" style="border: 0;" allowfullscreen="" loading="lazy"></iframe> -->
+    <div id="map-canvas"></div>
 
     <footer class="page__footer footer">
       <a class="footer__logo" href="#">
@@ -681,6 +685,7 @@
       </div>
     </footer>
 
+  <script defer src="js/leaflet.js"></script>
   <script defer src="js/chief-slider.js"></script>
   <script src="js/main.js" type="module"></script>
   <script>

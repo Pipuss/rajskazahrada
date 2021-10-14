@@ -96,3 +96,11 @@ img {
 .section-title {
   color: $color-brown-dark;
 }
+
+#map-canvas {
+  height: 222px;
+
+  @include width--m {
+    height: 306px;
+  }
+}
