@@ -1,14 +1,21 @@
 .icon-container {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  position: relative;
 
   &:hover {
     cursor: pointer;
   }
+}
+
+.header__icon,
+.footer__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header__icon {
@@ -66,8 +73,6 @@
 }
 
 .icon-container--l {
-  @include width--l {
-    width: 40px;
-    height: 40px;
-  }
+  width: 40px;
+  height: 40px;
 }

@@ -1,0 +1,19 @@
+.residence {
+  overflow: hidden;
+}
+
+.residence-slider {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.residence-slider picture {
+  display: block;
+  width: 100vw;
+  flex-grow: 1;
+}
+
+.residence-slider picture:nth-child(2) {
+  transform: translateX(-1000px);
+  // transform: translateY(-185px);
+}

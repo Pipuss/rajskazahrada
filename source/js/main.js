@@ -6,3 +6,4 @@ menuHandler();
 MAIN_LAYER.addTo(MAP);
 MAP_MARKER.addTo(MAP);
 
+console.log(document.querySelector('.header__nav-toggle'));
